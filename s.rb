@@ -1,15 +1,25 @@
 require 'pry-byebug'
 
-@array = [200,51,6,1,78,12,89,123,7676756,122,2,0]
+@array = [4,2,0]
 
+def ask_how_many
+  binding.pry
+  number_of_values = gets.chomp.to_i
+  get_value_then_append(number_of_values)
+end
 
+def get_value_then_append(num)
+  num.times do |i|
+    value = gets.chomp.to_i
+    @array << value
+  end
+end
 
 def compare_values(a,b)
   #Depending on the value here, it will reassign a in the main function
   # -1; a < b
   # 0; a = b
   # 1; a > b
-
   case a<=>b
   when -1 
     return "-1"
@@ -67,4 +77,5 @@ def repeatSort()
   @array
 end
 
+ask_how_many()
 repeatSort()
