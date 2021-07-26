@@ -3,15 +3,17 @@ require 'pry-byebug'
 @array = [4,3,78,2,0,2]
 
 
-
+# -1; a < b
+# 0; a = b
+# 1; a > b
 
 def compare_values(a,b)
   case a<=>b
-  when -1
+  when -1 
     return "-1"
-  when 0
+  when 0 
     return "0"
-  when 1
+  when 1 
     switch_index(a,b)
   end
 end
