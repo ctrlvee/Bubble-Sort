@@ -1,6 +1,6 @@
 require 'pry-byebug'
 
-@array = [4,3,78,2,0,2]
+@array = [200,51,6,1,78,12,89,123,7676756,122,2,0]
 
 
 
@@ -58,13 +58,12 @@ end
 
 
 def repeatSort()
-  binding.pry
   iterations = @array.size - 1
-
   iterations.times do |i|
     puts "This is ##{i}"
     sort()
   end
+  binding.pry
   @array
 end
 
