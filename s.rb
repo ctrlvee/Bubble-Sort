@@ -33,7 +33,6 @@ def get_index(a,b)
   @a_index = @array.index(a)
   @b_index = @array.index(b) 
   adjust_b_index()
-  
 end
 
 def switch_index(a,b)
@@ -42,19 +41,26 @@ def switch_index(a,b)
   @array[@b_index] = a
 end
 
-@array.reduce() do |a, b|
-  binding.pry
-  case compare_values(a,b)
-  when "-1"
-    a = b
-  when "0"
-    a = b
-  when "1"
-    a = a
+def sort
+  @array.reduce() do |a, b|
+   
+    case compare_values(a,b)
+    when "-1"
+      a = b
+    when "0"
+      a = b
+    when "1"
+      a = a
+    end
+    #puts "A: #{a} B: #{b}"
   end
-
-  #puts "A: #{a} B: #{b}"
 end
 
 
-@array
+def repeatSort()
+  binding.pry
+  iterations = @array.size - 1
+  sort()
+end
+
+repeatSort()
