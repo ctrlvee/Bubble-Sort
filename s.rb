@@ -20,9 +20,13 @@ def compare_values(a,b)
   end
 end
 
-def get_index(a,b)
+
+def get_index(a,b) 
   @a_index = @array.index(a)
-  @b_index = @array.index(b)
+  @b_index = @array.index(b) #We need this "b" to be the one after "a" at all times
+  # We can add an if statement checking if the b_index occurs before or after a_index
+  #Then if not, we reassign to the next occuring value. Until we get one value that occurs after a_index
+  #We need: a loop and case statement
 end
 
 def switch_index(a,b)
@@ -49,3 +53,5 @@ end
   #puts "A: #{a} B: #{b}"
 end
 
+
+@array
