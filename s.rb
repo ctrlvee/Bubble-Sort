@@ -60,7 +60,12 @@ end
 def repeatSort()
   binding.pry
   iterations = @array.size - 1
-  sort()
+
+  iterations.times do |i|
+    puts "This is ##{i}"
+    sort()
+  end
+  @array
 end
 
 repeatSort()
