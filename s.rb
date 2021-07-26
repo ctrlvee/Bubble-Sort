@@ -20,6 +20,13 @@ def compare_values(a,b)
   end
 end
 
+def adjust_b_index
+ if @b_index < @a_index
+  until @b_index > @a_index
+    @b_index += 1
+  end
+end
+end
 
 def get_index(a,b) 
   @a_index = @array.index(a)
@@ -27,6 +34,8 @@ def get_index(a,b)
   # We can add an if statement checking if the b_index occurs before or after a_index
   #Then if not, we reassign to the next occuring value. Until we get one value that occurs after a_index
   #We need: a loop and case statement
+  adjust_b_index()
+  
 end
 
 def switch_index(a,b)
